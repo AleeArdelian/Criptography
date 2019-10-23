@@ -1,0 +1,20 @@
+Lab1 - Vigenere Cipher
+
+The laboratory consists of a program that enables the user to encode and decode a message using the Vegenere Cipher.
+The project was implemented as a WPF application.
+
+In this case the plain text is defined as the letters a-z with the space charater and the chipertext is defined as the letters A-Z with the space charater.
+
+The program displays a window containing:
+- a plaintext texbox where the user can input the plaintext.
+- a key textbox where the user can input the key used to encrypt/decrypt.
+- a ciphertext textbox where the encrypted text will be shown and also where de ciphertext will be taken from for decryption.
+- a decryptedtext box where the decrypted text will be shown.
+- two buttons for encryption/decryption.
+
+When pressing the "Encrypt" button, the program will extract the plaintext and key from the textboxes and will output the encrypted text in the ciphertext texbox. If any of the key texbox or plaintext textbox are empty, the program will show a corresponding message.
+
+When pressing the "Decrypt" button, the program will extract the ciphertext from the cyphertext textbox and will output the decrypted text in the decrypthedtext textbox. If any of the key texbox or decrypthedtext textbox are empty, the program will show a corresponding message.
+
+
+

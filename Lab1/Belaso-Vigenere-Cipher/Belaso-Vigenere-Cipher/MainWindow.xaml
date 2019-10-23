@@ -1,0 +1,24 @@
+﻿<Window x:Class="Belaso_Vigenere_Cipher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Belaso_Vigenere_Cipher.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600" WindowStyle="None">
+    <Window.DataContext>
+        <local:ViewModel></local:ViewModel>
+    </Window.DataContext>
+    <Grid>
+        <Label Content="Belaso-Viginere Cipher&#xD;&#xA;" VerticalAlignment="Top" Margin="213,10,178.333,0" Width="202" FontWeight="Bold" HorizontalAlignment="Center" Height="37" FontFamily="Segoe UI Symbol" FontSize="16"/>
+        <Label Content="Message:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.351,4.269" Margin="323,81,0,0" FontWeight="Bold"/>
+        <TextBox x:Name="MessageBox" HorizontalAlignment="Left" Text="{Binding UiElements.MessageTextBox, UpdateSourceTrigger=PropertyChanged}" Height="23" Margin="390,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.Name="MessageTextbox"/>
+        <Button x:Name="EncriptButton" Content="Encrypt" Command="{Binding EncryptCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="244,137,0,0" />
+        <TextBox x:Name="EncriptTextbox" Text="{Binding UiElements.EncriptedTextBox, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="20" Margin="183,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" />
+        <Label Content="Key:" HorizontalAlignment="Left" Margin="64,81,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="KeyTextbox" Text="{Binding UiElements.KeyTextBox, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="103,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name ="DecryptButton" Content="Decrypt" HorizontalAlignment="Left" Command="{Binding DecryptCommand}" Margin="244,214,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="DecryptTextbox" Text="{Binding UiElements.DecryptedTextBox, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="183,249,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="202"/>
+
+    </Grid>
+</Window>
