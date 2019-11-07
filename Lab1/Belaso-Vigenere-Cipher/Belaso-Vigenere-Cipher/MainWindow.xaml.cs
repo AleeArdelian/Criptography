@@ -25,7 +25,6 @@ namespace Belaso_Vigenere_Cipher
         public MainWindow()
         {
             InitializeComponent();
-            
         }
 
     }
